@@ -1,7 +1,9 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.example.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -10,11 +12,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bindingM= ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingM.root)
+
     }
 
-    fun search(){
-      //  bindingM.searchb.setOnClickListener(){
-            //val intent = Intent(Search1Activity::class.java)
 
-        }
+    fun search(view:View){
+
+        val intent = Intent(this ,SearchActivity::class.java)
+        startActivity(intent)
     }
+
+
+}
