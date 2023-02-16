@@ -19,8 +19,10 @@
         app:layout_constraintVertical_bias="0.00999999">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/SearchEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="@string/search_hint"
             android:inputType="number" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -30,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Бібліотека"
+        android:text="@string/library"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/Search"
         app:layout_constraintHorizontal_bias="0.497"
@@ -43,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Жіночий туалет"
+        android:text="@string/woman_wc"
         app:layout_constraintEnd_toEndOf="@+id/Library"
         app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toStartOf="@+id/Library"
@@ -55,7 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Чоловічий туалет"
+        android:text="@string/man_wc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +68,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Механічна майстерня"
+        android:text="@string/mechanic"
         app:layout_constraintEnd_toEndOf="@+id/ManWC"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,7 +79,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Швейна"
+        android:text="@string/cloth"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Mechanic" />
@@ -87,7 +89,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Деревообробна майстерня"
+        android:text="@string/wood"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,7 +100,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Актовий зал"
+        android:text="@string/act_hall"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,7 +111,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Їдальня"
+        android:text="@string/eat_room"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ActHall" />
@@ -119,7 +121,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Медпункт"
+        android:text="@string/health_room"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EatRoom" />
@@ -129,7 +131,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Лекційна зала"
+        android:text="@string/lection_hall"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/HealthRoom" />

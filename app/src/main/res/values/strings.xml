@@ -2,4 +2,15 @@
     <string name="app_name">Полігід</string>
     <string name="search">Search</string>
     <string name="todo">TODO</string>
+    <string name="search_hint">Введіть номер кабінету</string>
+    <string name="library">Бібліотека</string>
+    <string name="woman_wc">Жіночий туалет</string>
+    <string name="man_wc">Чоловічий туалет</string>
+    <string name="mechanic">Механічна майстерня</string>
+    <string name="cloth">Швейна</string>
+    <string name="wood">Деревообробна майстерня</string>
+    <string name="act_hall">Актовий зал</string>
+    <string name="eat_room">Їдальня</string>
+    <string name="health_room">Медпункт</string>
+    <string name="lection_hall">Лекційна зала</string>
 </resources>
