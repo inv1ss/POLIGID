@@ -22,5 +22,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+// app:layout_constraintStart_toStartOf="@+id/Search"
+//app:layout_constraintTop_toBottomOf="@+id/Search"
 
 }
