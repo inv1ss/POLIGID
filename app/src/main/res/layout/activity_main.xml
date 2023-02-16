@@ -9,14 +9,15 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="361dp"
-        android:layout_height="405dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/screenshot_20230215_081705" />
+        app:srcCompat="@drawable/screenshot_20230215_081705"
+        android:contentDescription="@string/todo" />
 
     <Button
         android:id="@+id/SearchButton"
@@ -24,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:onClick="search"
-        android:text="Search"
+        android:text="@string/search"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
