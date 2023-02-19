@@ -8,6 +8,7 @@ import com.example.myapplication.databinding.RecycleviewItemBinding
 
 class SearchAdapter: RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
     val searchList= ArrayList<Search>()
+
     class SearchHolder(item: View): RecyclerView.ViewHolder(item) {
         val binding = RecycleviewItemBinding.bind(item)
         fun bind(search:Search)=with(binding){
@@ -31,6 +32,13 @@ class SearchAdapter: RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
 
     fun addSearchButton(search : Search){
         searchList.add(search)
+        notifyDataSetChanged()
+    }
+
+    fun createList(list : List<Search>)
+    {
+        searchList.clear()
+        searchList.addAll(list)
         notifyDataSetChanged()
     }
 

@@ -1,6 +1,3 @@
 package com.example.myapplication
 
-data class Search(val title: String) {
-
-
-}
+data class Search(val title: String)
