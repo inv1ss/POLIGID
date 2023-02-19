@@ -7,19 +7,22 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.myapplication.databinding.ActivitySearchBinding
 
 class SearchActivity : AppCompatActivity() {
-    lateinit var bindingS : ActivitySearchBinding
+    private lateinit var bindingS : ActivitySearchBinding
     private val adapter = SearchAdapter()
-    private val nameB = listOf<String>(
-        "@string/library",
-        "@string/woman_wc",
-        "@string/man_wc",
-        "@string/mechanic",
-        "@string/cloth",
-        "@string/wood",
-        "@string/act_hall",
-        "@string/eat_room",
-        "@string/health_room",
-        "@string/lection_hall")
+    private val nameB = listOf(
+        "saas",
+        "asas"
+//        getString(R.string.library),
+//        getString(R.string.woman_wc),
+//        getString(R.string.man_wc),
+//        getString(R.string.mechanic),
+//        getString(R.string.cloth),
+//        getString(R.string.wood),
+//        getString(R.string.act_hall),
+//        getString(R.string.eat_room),
+ //       getString(R.string.health_room),
+ //       getString(R.string.lection_hall)
+    )
 
 
 
@@ -30,11 +33,13 @@ class SearchActivity : AppCompatActivity() {
         bindingS= ActivitySearchBinding.inflate(layoutInflater)
         setContentView(bindingS.root)
         init()
+       // bindingS.recycleView.adapter.
     }
+
 
     private fun init() {
         val search = ArrayList<Search>()
-        for(index in 0..(nameB.size-1)) {
+        for(index in 0 .. (nameB.size-1)) {
             search.add(index, Search(nameB[index]))
         }
         bindingS.apply{

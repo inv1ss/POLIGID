@@ -13,4 +13,5 @@
     <string name="eat_room">Їдальня</string>
     <string name="health_room">Медпункт</string>
     <string name="lection_hall">Лекційна зала</string>
+    <string name="as">\@string/man_wc</string>
 </resources>
