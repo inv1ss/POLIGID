@@ -27,6 +27,7 @@
         android:onClick="search"
         android:text="@string/search"
         android:textAllCaps="false"
+        app:cornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

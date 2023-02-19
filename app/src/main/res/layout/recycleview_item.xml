@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -9,6 +10,10 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:insetLeft="16dp"
+        android:insetRight="16dp"
+
+        android:text="Button"
         android:textAllCaps="false"
-        android:text="Button" />
+        app:cornerRadius="20dp" />
 </LinearLayout>
