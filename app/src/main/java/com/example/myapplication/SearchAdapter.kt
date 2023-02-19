@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.RecycleviewItemBinding
 
@@ -24,16 +25,28 @@ class SearchAdapter: RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
 
     override fun onBindViewHolder(holder: SearchHolder, position: Int) {
         holder.bind(searchList[position])
+        var txt="-1"
+
+        holder.binding.button.setOnClickListener(){
+            when(position){
+                0 -> txt="1"
+                1 -> txt="2"
+                2 -> txt="3"
+                3 -> txt="4"
+                4 -> txt="5"
+                5 -> txt="6"
+                6 -> txt="7"
+                7 -> txt="8"
+                8 -> txt="9"
+                9 -> txt="10"
+            }
+        }
     }
 
     override fun getItemCount(): Int {
         return searchList.size
     }
 
-    fun addSearchButton(search : Search){
-        searchList.add(search)
-        notifyDataSetChanged()
-    }
 
     fun createList(list : List<Search>)
     {

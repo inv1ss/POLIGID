@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Полігід</string>
-    <string name="search">Search</string>
+    <string name="search">Вибрати приміщення</string>
     <string name="todo">TODO</string>
     <string name="search_hint">Введіть номер кабінету</string>
     <string name="library">Бібліотека</string>
@@ -13,5 +13,4 @@
     <string name="eat_room">Їдальня</string>
     <string name="health_room">Медпункт</string>
     <string name="lection_hall">Лекційна зала</string>
-    <string name="as">\@string/man_wc</string>
 </resources>
