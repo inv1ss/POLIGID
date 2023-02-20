@@ -1,14 +1,17 @@
 package com.example.myapplication
 
+import android.app.Activity
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.RecycleviewItemBinding
 
 class SearchAdapter: RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
     val searchList= ArrayList<Search>()
+    var txt="-1"
+
 
     class SearchHolder(item: View): RecyclerView.ViewHolder(item) {
         val binding = RecycleviewItemBinding.bind(item)
@@ -25,7 +28,8 @@ class SearchAdapter: RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
 
     override fun onBindViewHolder(holder: SearchHolder, position: Int) {
         holder.bind(searchList[position])
-        var txt="-1"
+        val context = holder.itemView.getContext()
+
 
         holder.binding.button.setOnClickListener(){
             when(position){
@@ -39,7 +43,15 @@ class SearchAdapter: RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
                 7 -> txt="8"
                 8 -> txt="9"
                 9 -> txt="10"
+                10 -> txt="11"
+                11 -> txt="12"
+                12 -> txt="13"
+                13 -> txt="14"
+                14 -> txt="15"
             }
+          //  val i = Intent(context, SearchActivity::class.java)
+          //  i.putExtra("roomad", txt)
+            (context as Activity).finish()
         }
     }
 

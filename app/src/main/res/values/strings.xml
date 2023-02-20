@@ -13,4 +13,9 @@
     <string name="eat_room">Їдальня</string>
     <string name="health_room">Медпункт</string>
     <string name="lection_hall">Лекційна зала</string>
+    <string name="gym">Спортзал</string>
+    <string name="accountant">Бухгалтерія</string>
+    <string name="department">Завідувач відділення</string>
+    <string name="teachers">Викладацька</string>
+    <string name="director">Приймальня/Директор</string>
 </resources>
