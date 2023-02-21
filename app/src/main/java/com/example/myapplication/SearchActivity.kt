@@ -60,7 +60,7 @@ class SearchActivity : AppCompatActivity() {
 
     fun finishAct(room : Int){
         Toast.makeText(this, "$room", Toast.LENGTH_SHORT).show()
-        //finish()
+        finish()
     }
 
     private fun init() {
