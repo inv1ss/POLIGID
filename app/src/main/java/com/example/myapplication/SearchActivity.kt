@@ -3,6 +3,7 @@ package com.example.myapplication
 
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
 import android.widget.Toast
@@ -60,6 +61,11 @@ class SearchActivity : AppCompatActivity() {
 
     fun finishAct(room : Int){
         Toast.makeText(this, "$room", Toast.LENGTH_SHORT).show()
+        var str=room.toString()
+        val editIntent = Intent().apply{
+            putExtra("room", str)
+        }
+        setResult(RESULT_OK, editIntent)
         finish()
     }
 

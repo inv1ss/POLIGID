@@ -4,28 +4,29 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var bindingM : ActivityMainBinding
-//    var room = 0
+    private var editLauncher : ActivityResultLauncher<Intent>? = null
+    var roomMain = 0
     override fun onCreate(savedInstanceState: Bundle?) {
     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         super.onCreate(savedInstanceState)
         bindingM= ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingM.root)
+        editLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+            if(it.resultCode == RESULT_OK){
 
+                bindingM.textView.text = it.data!!.getStringExtra("room")
+            }
+
+        }
     }
 
-//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//        super.onActivityResult(requestCode, resultCode, data)
-////        if(requestCode==100 && resultCode == RESULT_OK && data != null)
-////            room = data.getStringExtra("actroom").toString()
-////        else
-////            room="-1000"
-////        bindingM.textView.text=room.toString()
-//    }
 
 
     fun search(view : View) {
