@@ -34,26 +34,24 @@ class SearchAdapter: RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
 
         holder.binding.button.setOnClickListener {
             when(position){
-                0 -> txt="1".toInt()
+                0 -> txt="-1".toInt()
                 1 -> txt="2".toInt()
                 2 -> txt="3".toInt()
-                3 -> txt="4".toInt()
+                3 -> txt="-4".toInt()
                 4 -> txt="5".toInt()
                 5 -> txt="6".toInt()
                 6 -> txt="7".toInt()
-                7 -> txt="8".toInt()
-                8 -> txt="9".toInt()
-                9 -> txt="10".toInt()
-                10 -> txt="11".toInt()
-                11 -> txt="12".toInt()
-                12 -> txt="13".toInt()
-                13 -> txt="14".toInt()
-                14 -> txt="15".toInt()
+                7 -> txt="-8".toInt()
+                8 -> txt="119".toInt()
+                9 -> txt="307".toInt()
+                10 -> txt="102".toInt()
+                11 -> txt="123".toInt()
+                12 -> txt="210".toInt()
+                13 -> txt="106".toInt()
+                14 -> txt="216".toInt()
             }
 
-            Toast.makeText(context, "Введіть номер приміщення ${((getActivity(context) as SearchActivity).room)}", Toast.LENGTH_SHORT).show()
             (getActivity(context) as SearchActivity).finishAct(txt)
-            //(context as Activity).finish()
         }
     }
 

@@ -6,6 +6,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -45,11 +46,13 @@ class SearchActivity : AppCompatActivity() {
 
         bindingS.SearchEdit.setOnKeyListener { _, i, keyEvent ->
             if(i==KeyEvent.KEYCODE_ENTER && keyEvent.action== KeyEvent.ACTION_UP) {
-                if(bindingS.SearchEdit.text.toString().toInt()!=0)
+                if(bindingS.SearchEdit.text.toString()!= "" ) {
                     room = bindingS.SearchEdit.text.toString().toInt()
+                    finishAct(room)
+                }
                 else
-                    Toast.makeText(this, "Введіть номер приміщення $room", Toast.LENGTH_SHORT).show()
-                finishAct(room)
+                    Toast.makeText(this, "Введіть номер приміщення", Toast.LENGTH_SHORT).show()
+
                 return@setOnKeyListener true
             } else {
 
@@ -59,11 +62,20 @@ class SearchActivity : AppCompatActivity() {
 
     }
 
+    fun onSearchClick(view : View){
+        if(bindingS.SearchEdit.text.toString()!= ""){
+            room = bindingS.SearchEdit.text.toString().toInt()
+            finishAct(room)
+    }
+        else
+            Toast.makeText(this, "Введіть номер приміщення", Toast.LENGTH_SHORT).show()
+
+    }
+
     fun finishAct(room : Int){
-        Toast.makeText(this, "$room", Toast.LENGTH_SHORT).show()
-        var str=room.toString()
+    //    Toast.makeText(this, "$room", Toast.LENGTH_SHORT).show()
         val editIntent = Intent().apply{
-            putExtra("room", str)
+            putExtra("room", room)
         }
         setResult(RESULT_OK, editIntent)
         finish()
@@ -71,7 +83,7 @@ class SearchActivity : AppCompatActivity() {
 
     private fun init() {
         val search = ArrayList<Search>()
-        for(index in 0 until (nameB.size-1)) {
+        for(index in 0 until (nameB.size)) {
             val txt1= nameB[index]
             search.add(index, Search(txt1))
         }

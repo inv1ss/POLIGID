@@ -9,18 +9,18 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/Search"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="350dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.500"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.00999999">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/SearchEdit"
-            android:layout_width="match_parent"
+            android:layout_width="278dp"
             android:layout_height="wrap_content"
             android:hint="@string/search_hint"
             android:inputType="number"
@@ -30,18 +30,36 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleView"
-        android:layout_width="366dp"
-        android:layout_height="625dp"
+        android:layout_width="367dp"
+        android:layout_height="477dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Search"
         app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/recycleview_item" />
+
+    <Button
+        android:id="@+id/EnterB"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="onSearchClick"
+        android:paddingStart="9dp"
+        android:paddingTop="7dp"
+        android:paddingEnd="9dp"
+        android:text="."
+        app:cornerRadius="100dp"
+        app:icon="@android:drawable/ic_menu_search"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
