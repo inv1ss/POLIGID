@@ -18,4 +18,5 @@
     <string name="department">Завідувач відділення</string>
     <string name="teachers">Викладацька</string>
     <string name="director">Приймальня/Директор</string>
+    <string name="button">Button</string>
 </resources>

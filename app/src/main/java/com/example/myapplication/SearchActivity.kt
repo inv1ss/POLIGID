@@ -1,12 +1,10 @@
 package com.example.myapplication
 
 
-import android.content.Intent
+
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.KeyEvent
-import android.view.View.OnKeyListener
-import android.view.inputmethod.EditorInfo
-import android.widget.TextView.OnEditorActionListener
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -37,40 +35,39 @@ class SearchActivity : AppCompatActivity() {
         )
 
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bindingS= ActivitySearchBinding.inflate(layoutInflater)
         setContentView(bindingS.root)
         init()
-        bindingS.SearchEdit.setOnKeyListener { view, i, keyEvent ->
+
+        bindingS.SearchEdit.setOnKeyListener { _, i, keyEvent ->
             if(i==KeyEvent.KEYCODE_ENTER && keyEvent.action== KeyEvent.ACTION_UP) {
-                if(bindingS.SearchEdit.text.toString().toInt()!=null)
-                    room = 1//bindingS.SearchEdit.text.toString().toInt()
+                if(bindingS.SearchEdit.text.toString().toInt()!=0)
+                    room = bindingS.SearchEdit.text.toString().toInt()
                 else
-                    Toast.makeText(this, "Введіть номер приміщення", Toast.LENGTH_SHORT).show()
-     //           Toast.makeText(this, bindingS.SearchEdit.text.toString(), Toast.LENGTH_SHORT).show()
-                finish()
+                    Toast.makeText(this, "Введіть номер приміщення $room", Toast.LENGTH_SHORT).show()
+                finishAct(room)
                 return@setOnKeyListener true
-            }
-            else {
-                room = 1//intent.getStringExtra("txt").toString().toInt()
+            } else {
+
                 false
             }
-
         }
-      //  intent.putExtra("actroom", room.toString())
-       // setResult(RESULT_OK, intent)
-       // val i = Intent(this, MainActivity::class.java)
-       // i.putExtra("room", room)
 
     }
 
+    fun finishAct(room : Int){
+        Toast.makeText(this, "$room", Toast.LENGTH_SHORT).show()
+        //finish()
+    }
 
     private fun init() {
         val search = ArrayList<Search>()
         for(index in 0 until (nameB.size-1)) {
-            var txt= nameB[index]
-            search.add(index, Search(txt))
+            val txt1= nameB[index]
+            search.add(index, Search(txt1))
         }
         bindingS.apply{
             recycleView.layoutManager=GridLayoutManager(this@SearchActivity, 1)

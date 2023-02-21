@@ -13,7 +13,7 @@
         android:insetLeft="16dp"
         android:insetRight="16dp"
 
-        android:text="Button"
+        android:text="@string/button"
         android:textAllCaps="false"
         app:cornerRadius="20dp" />
 </LinearLayout>
