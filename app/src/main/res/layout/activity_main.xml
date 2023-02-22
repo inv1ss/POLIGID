@@ -20,10 +20,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.696"
+        app:layout_constraintVertical_bias="0.726"
 
         />
-
 
     <TextView
         android:id="@+id/textView"
@@ -32,32 +31,33 @@
         android:text="123"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61" />
+        app:layout_constraintVertical_bias="0.641" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="222dp"
-        android:layout_height="344dp"
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="233dp"
+        android:layout_height="369dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintHorizontal_bias="0.011"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.198"
+        app:layout_constraintVertical_bias="0.204"
         app:srcCompat="@drawable/corpus_2" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="165dp"
-        android:layout_height="357dp"
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="172dp"
+        android:layout_height="376dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintHorizontal_bias="0.983"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.205"
+        app:layout_constraintVertical_bias="0.208"
         app:srcCompat="@drawable/corpus_1" />
 
 
