@@ -33,7 +33,10 @@ class SearchActivity : AppCompatActivity() {
             getString(R.string.department),
             getString(R.string.director),
             getString(R.string.gym),
-            getString(R.string.teachers)
+            getString(R.string.teachers),
+            getString(R.string.reading_room),
+            getString(R.string.slusar),
+            getString(R.string.training)
         )
 
 

@@ -5,7 +5,6 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.RecycleviewItemBinding
 import com.google.android.material.internal.ContextUtils.getActivity
@@ -49,6 +48,9 @@ class SearchAdapter: RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
                 12 -> txt="210".toInt()
                 13 -> txt="106".toInt()
                 14 -> txt="216".toInt()
+                15 -> txt="-2".toInt()
+                16 -> txt="-3".toInt()
+                17 -> txt="1".toInt()
             }
 
             (getActivity(context) as SearchActivity).finishAct(txt)
