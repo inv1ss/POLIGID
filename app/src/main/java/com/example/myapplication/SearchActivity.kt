@@ -14,7 +14,7 @@ import com.example.myapplication.databinding.ActivitySearchBinding
 
 
 class SearchActivity : AppCompatActivity() {
-    private lateinit var bindingS : ActivitySearchBinding
+    private lateinit var bindingS: ActivitySearchBinding
     var room = 0
     private val adapter = SearchAdapter()
     private val nameB: List<String>
@@ -43,17 +43,16 @@ class SearchActivity : AppCompatActivity() {
     @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bindingS= ActivitySearchBinding.inflate(layoutInflater)
+        bindingS = ActivitySearchBinding.inflate(layoutInflater)
         setContentView(bindingS.root)
         init()
 
         bindingS.SearchEdit.setOnKeyListener { _, i, keyEvent ->
-            if(i==KeyEvent.KEYCODE_ENTER && keyEvent.action== KeyEvent.ACTION_UP) {
-                if(bindingS.SearchEdit.text.toString()!= "" ) {
+            if (i == KeyEvent.KEYCODE_ENTER && keyEvent.action == KeyEvent.ACTION_UP) {
+                if (bindingS.SearchEdit.text.toString() != "") {
                     room = bindingS.SearchEdit.text.toString().toInt()
-                    finishAct(room)
-                }
-                else
+                    checkCorp(room)
+                } else
                     Toast.makeText(this, "Введіть номер приміщення", Toast.LENGTH_SHORT).show()
 
                 return@setOnKeyListener true
@@ -65,19 +64,18 @@ class SearchActivity : AppCompatActivity() {
 
     }
 
-    fun onSearchClick(view : View){
-        if(bindingS.SearchEdit.text.toString()!= ""){
+    fun onSearchClick(view: View) {
+        if (bindingS.SearchEdit.text.toString() != "") {
             room = bindingS.SearchEdit.text.toString().toInt()
-            finishAct(room)
-    }
-        else
+            checkCorp(room)
+        } else
             Toast.makeText(this, "Введіть номер приміщення", Toast.LENGTH_SHORT).show()
 
     }
 
-    fun finishAct(room : Int){
-    //    Toast.makeText(this, "$room", Toast.LENGTH_SHORT).show()
-        val editIntent = Intent().apply{
+    fun finishAct(room: Int) {
+        //    Toast.makeText(this, "$room", Toast.LENGTH_SHORT).show()
+        val editIntent = Intent().apply {
             putExtra("room", room)
         }
         setResult(RESULT_OK, editIntent)
@@ -86,14 +84,27 @@ class SearchActivity : AppCompatActivity() {
 
     private fun init() {
         val search = ArrayList<Search>()
-        for(index in 0 until (nameB.size)) {
-            val txt1= nameB[index]
+        for (index in 0 until (nameB.size)) {
+            val txt1 = nameB[index]
             search.add(index, Search(txt1))
         }
-        bindingS.apply{
-            recycleView.layoutManager=GridLayoutManager(this@SearchActivity, 1)
+        bindingS.apply {
+            recycleView.layoutManager = GridLayoutManager(this@SearchActivity, 1)
             recycleView.adapter = adapter
             adapter.createList(search)
+        }
+    }
+
+
+    private fun checkCorp(room: Int) {
+        when (room) {
+            1, 2, 3, 5, 6, 7, 101, 102, 103, 104, 105, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 122, 123,
+            201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216,
+            301, 302, 303, 304, 305, 306, 307, 308, 309, 310,
+            401, 402, 403, 404,  -1, -2, -3, -4, -8, 127, 128, 129, 217, 218, 220, 221, 222, 223, 225, 228, 229, 230 -> finishAct(room)
+            else -> {
+                Toast.makeText(this, "Такого приміщення не існує", Toast.LENGTH_SHORT).show()
             }
         }
     }
+}

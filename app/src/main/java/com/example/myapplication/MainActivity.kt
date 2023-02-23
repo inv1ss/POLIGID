@@ -34,11 +34,10 @@ class MainActivity : AppCompatActivity() {
             201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216,
             301, 302, 303, 304, 305, 306, 307, 308, 309, 310,
             401, 402, 403, 404 -> bindingM.textView.text = "->"
-            -1, -2, -3, -4, -8, 127, 128, 129, 217, 218, 220, 221, 222, 223, 225, 228, 229, 230 -> bindingM.textView.text =
-                "<-"
-            else -> {
+            -1, -2, -3, -4, -8, 127, 128, 129, 217, 218, 220, 221, 222, 223, 225, 228, 229, 230 -> bindingM.textView.text = "<-"
+                else -> {
                 bindingM.textView.text = ""
-                Toast.makeText(this, "Такого приміщення не існує", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, "Такого приміщення не існує", Toast.LENGTH_SHORT).show()
             }
         }
     }
