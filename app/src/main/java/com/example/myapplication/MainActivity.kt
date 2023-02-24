@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -24,7 +25,6 @@ class MainActivity : AppCompatActivity() {
                 roomMain = it.data!!.getIntExtra("room", 0)
                 changeCorp(roomMain)
             }
-
         }
     }
 
@@ -33,11 +33,18 @@ class MainActivity : AppCompatActivity() {
             1, 2, 3, 5, 6, 7, 101, 102, 103, 104, 105, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 122, 123,
             201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216,
             301, 302, 303, 304, 305, 306, 307, 308, 309, 310,
-            401, 402, 403, 404 -> bindingM.textView.text = "->"
-            -1, -2, -3, -4, -8, 127, 128, 129, 217, 218, 220, 221, 222, 223, 225, 228, 229, 230 -> bindingM.textView.text = "<-"
+            401, 402, 403, 404 -> {
+                bindingM.imageButton2.setImageResource(R.drawable.corpus1zelen)
+                bindingM.imageButton.setImageResource(R.drawable.corpus_2)
+            }
+            -1, -2, -3, -4, -8, 127, 128, 129, 217, 218, 220, 221, 222, 223, 225, 228, 229, 230 -> {
+                bindingM.imageButton.setImageResource(R.drawable.corpuss2zelen)
+                bindingM.imageButton2.setImageResource(R.drawable.corpus_1)
+            }
                 else -> {
                 bindingM.textView.text = ""
-                //Toast.makeText(this, "Такого приміщення не існує", Toast.LENGTH_SHORT).show()
+                bindingM.imageButton.setImageResource(R.drawable.corpus_2)
+                bindingM.imageButton2.setImageResource(R.drawable.corpus_1)
             }
         }
     }
@@ -47,6 +54,10 @@ class MainActivity : AppCompatActivity() {
 
     fun corp1(view : View){
         val intent = Intent(this, CorpusOne::class.java)
+        startActivity(intent)
+    }
+    fun corp2(view : View){
+        val intent = Intent(this, CorpusTwo::class.java)
         startActivity(intent)
     }
 }
