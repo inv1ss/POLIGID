@@ -31,13 +31,10 @@ class SearchAdapter: RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
         holder.bind(searchList[position])
         val context = holder.itemView.context
      /*
-        -1getString(R.string.library),
 
         5getString(R.string.cloth),?
         7getString(R.string.act_hall),?
-
-        -2getString(R.string.reading_room),
-        -3getString(R.string.slusar),*/
+*/
         holder.binding.button.setOnClickListener {
             when(position){
                 0 -> txt="-1".toInt()
@@ -56,7 +53,7 @@ class SearchAdapter: RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
                 13 -> txt="106".toInt()
                 14 -> txt="216".toInt()
                 15 -> txt="-2".toInt()
-                16 -> txt="-3".toInt()
+                16 -> txt="129".toInt()
                 17 -> txt="1".toInt()
             }
 

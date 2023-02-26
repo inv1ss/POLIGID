@@ -14,6 +14,7 @@ class CorpusTwo : AppCompatActivity() {
         bindingCT = ActivityCorpusTwoBinding.inflate(layoutInflater)
         setContentView(bindingCT.root)
         room = getIntent().getIntExtra("room", 0)
+        changeImage(room)
     }
 
     fun onClick(view: View){
@@ -39,8 +40,8 @@ class CorpusTwo : AppCompatActivity() {
         228->bindingCT.imageView2.setImageResource(R.drawable.c228)
         229->bindingCT.imageView2.setImageResource(R.drawable.c229)
         230->bindingCT.imageView2.setImageResource(R.drawable.c230)
-        -2->bindingCT.imageView2.setImageResource(R.drawable.lib)
-        -1->bindingCT.imageView2.setImageResource(R.drawable.read)
+        -1->bindingCT.imageView2.setImageResource(R.drawable.lib)
+        -2->bindingCT.imageView2.setImageResource(R.drawable.read)
         }
     }
 
