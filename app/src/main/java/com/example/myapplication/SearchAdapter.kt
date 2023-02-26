@@ -30,7 +30,14 @@ class SearchAdapter: RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
     override fun onBindViewHolder(holder: SearchHolder, position: Int) {
         holder.bind(searchList[position])
         val context = holder.itemView.context
-
+     /*
+        -1getString(R.string.library),
+        -4getString(R.string.mechanic),
+        5getString(R.string.cloth),?
+        7getString(R.string.act_hall),?
+        -8getString(R.string.eat_room),
+        -2getString(R.string.reading_room),
+        -3getString(R.string.slusar),*/
         holder.binding.button.setOnClickListener {
             when(position){
                 0 -> txt="-1".toInt()

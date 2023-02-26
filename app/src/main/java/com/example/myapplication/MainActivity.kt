@@ -30,7 +30,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun changeCorp(room : Int) {
         when (room) {
-            1, 2, 3, 5, 6, 7, 101, 102, 103, 104, 105, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 122, 123,
+            1, 2, 3, 5, 6, 7,
+            101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 122, 123,
             201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216,
             301, 302, 303, 304, 305, 306, 307, 308, 309, 310,
             401, 402, 403, 404 -> {
@@ -54,10 +55,16 @@ class MainActivity : AppCompatActivity() {
 
     fun corp1(view : View){
         val intent = Intent(this, CorpusOne::class.java)
+        intent.putExtra("room", roomMain)
         startActivity(intent)
+        bindingM.imageButton.setImageResource(R.drawable.corpus_2)
+        bindingM.imageButton2.setImageResource(R.drawable.corpus_1)
     }
     fun corp2(view : View){
         val intent = Intent(this, CorpusTwo::class.java)
+        intent.putExtra("room", roomMain)
         startActivity(intent)
+        bindingM.imageButton.setImageResource(R.drawable.corpus_2)
+        bindingM.imageButton2.setImageResource(R.drawable.corpus_1)
     }
 }

@@ -24,4 +24,5 @@
 
     <string name="button">Button</string>
     <string name="todo2">todo</string>
+    <string name="main">Меню</string>
 </resources>
