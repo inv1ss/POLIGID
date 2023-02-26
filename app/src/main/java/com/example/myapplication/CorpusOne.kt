@@ -10,7 +10,7 @@ import com.example.myapplication.databinding.ActivityCorpusTwoBinding
 
 class CorpusOne : AppCompatActivity() {
     private lateinit var bindingCO : ActivityCorpusOneBinding
-    var room=-1
+    var room=0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bindingCO = ActivityCorpusOneBinding.inflate(layoutInflater)
@@ -22,7 +22,7 @@ class CorpusOne : AppCompatActivity() {
     fun changeImage(room : Int){
         when(room){
             //1-1
-        -1 -> bindingCO.imageView4.setImageResource(R.drawable.corp1_1)
+        0 -> bindingCO.imageView4.setImageResource(R.drawable.corp1_1)
          101-> bindingCO.imageView4.setImageResource(R.drawable.c101)
          102-> bindingCO.imageView4.setImageResource(R.drawable.c102__)
          103-> bindingCO.imageView4.setImageResource(R.drawable.c103)
