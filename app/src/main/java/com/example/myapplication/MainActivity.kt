@@ -1,5 +1,5 @@
 package com.example.myapplication
-
+// фікс обертання екрану, реалізація гуляння між поверхами
 import android.content.Intent
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity

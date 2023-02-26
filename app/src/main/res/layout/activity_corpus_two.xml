@@ -30,6 +30,8 @@
         android:layout_height="wrap_content"
         android:onClick="onClick"
         android:text="@string/main"
+        android:textAllCaps="false"
+        app:cornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

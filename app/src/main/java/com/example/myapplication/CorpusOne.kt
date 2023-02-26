@@ -87,6 +87,7 @@ class CorpusOne : AppCompatActivity() {
 
     fun onClick(view: View){
         finish()
+        bindingCO.imageView4.setImageResource(R.drawable.corp1_1)
     }
 
 }

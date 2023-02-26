@@ -19,13 +19,14 @@ class CorpusTwo : AppCompatActivity() {
 
     fun onClick(view: View){
         finish()
+        bindingCT.imageView2.setImageResource(R.drawable.corp2_1)
     }
 
     fun changeImage(room : Int){
         when(room){
         0->bindingCT.imageView2.setImageResource(R.drawable.corp2_1)
         127->bindingCT.imageView2.setImageResource(R.drawable.c127)
-        128->bindingCT.imageView2.setImageResource(R.drawable.c218)
+        128->bindingCT.imageView2.setImageResource(R.drawable.c128)
         129->bindingCT.imageView2.setImageResource(R.drawable.c129)
         -8->bindingCT.imageView2.setImageResource(R.drawable.eat)
         -4->bindingCT.imageView2.setImageResource(R.drawable.mehanic)
