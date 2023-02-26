@@ -40,6 +40,7 @@ class CorpusOne : AppCompatActivity() {
          115-> bindingCO.imageView4.setImageResource(R.drawable.c115)
          116-> bindingCO.imageView4.setImageResource(R.drawable.c116)
          117-> bindingCO.imageView4.setImageResource(R.drawable.c117)
+         118-> bindingCO.imageView4.setImageResource(R.drawable.c118)
          119-> bindingCO.imageView4.setImageResource(R.drawable.c119__)
          120-> bindingCO.imageView4.setImageResource(R.drawable.c120)
          122-> bindingCO.imageView4.setImageResource(R.drawable.c122)
@@ -47,7 +48,9 @@ class CorpusOne : AppCompatActivity() {
          3-> bindingCO.imageView4.setImageResource(R.drawable.mwc)
          2-> bindingCO.imageView4.setImageResource(R.drawable.wwc)
          6-> bindingCO.imageView4.setImageResource(R.drawable.wood)
+         7-> bindingCO.imageView4.setImageResource(R.drawable.acthall)
          1-> bindingCO.imageView4.setImageResource(R.drawable.training)
+         5-> bindingCO.imageView4.setImageResource(R.drawable.keys)
             //1-2
          201-> bindingCO.imageView4.setImageResource(R.drawable.c201)
          202-> bindingCO.imageView4.setImageResource(R.drawable.c202)

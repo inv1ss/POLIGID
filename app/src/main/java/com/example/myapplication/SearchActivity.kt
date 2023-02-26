@@ -15,7 +15,7 @@ import com.example.myapplication.databinding.ActivitySearchBinding
 
 class SearchActivity : AppCompatActivity() {
     private lateinit var bindingS: ActivitySearchBinding
-    var room = 0
+    private var room = 0
     private val adapter = SearchAdapter()
     private val nameB: List<String>
         get() = listOf(
@@ -36,7 +36,8 @@ class SearchActivity : AppCompatActivity() {
             getString(R.string.teachers),
             getString(R.string.reading_room),
             getString(R.string.slusar),
-            getString(R.string.training)
+            getString(R.string.training),
+            getString(R.string.key_room )
         )
 
 
@@ -98,7 +99,7 @@ class SearchActivity : AppCompatActivity() {
 
     private fun checkCorp(room: Int) {
         when (room) {
-            1, 2, 3, 5, 6, 7, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 122, 123,
+            1, 2, 3, 5, 7, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 122, 123,
             201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216,
             301, 302, 303, 304, 305, 306, 307, 308, 309, 310,
             401, 402, 403, 404,  -1, -2, -3, -4, -8, 127, 128, 129, 217, 218, 220, 221, 222, 223, 225, 228, 229, 230 -> finishAct(room)

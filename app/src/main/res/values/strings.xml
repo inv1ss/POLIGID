@@ -21,6 +21,7 @@
     <string name="training">Тренувальний зал</string>
     <string name="slusar">Слюсарна майстерня</string>
     <string name="reading_room">Читальний зал</string>
+    <string name="key_room">Видача ключів</string>
 
     <string name="button">Button</string>
     <string name="todo2">todo</string>

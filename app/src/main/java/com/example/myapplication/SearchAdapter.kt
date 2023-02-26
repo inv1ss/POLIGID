@@ -41,7 +41,7 @@ class SearchAdapter: RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
                 1 -> txt="2".toInt()
                 2 -> txt="3".toInt()
                 3 -> txt="-4".toInt()
-                4 -> txt="5".toInt()
+                4 -> txt="118".toInt()
                 5 -> txt="6".toInt()
                 6 -> txt="7".toInt()
                 7 -> txt="-8".toInt()
@@ -55,6 +55,7 @@ class SearchAdapter: RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
                 15 -> txt="-2".toInt()
                 16 -> txt="129".toInt()
                 17 -> txt="1".toInt()
+                18 -> txt="5".toInt()
             }
 
             (getActivity(context) as SearchActivity).finishAct(txt)

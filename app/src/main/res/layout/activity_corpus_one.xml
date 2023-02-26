@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="410dp"
+        android:layout_width="match_parent"
         android:layout_height="524dp"
         android:background="#D5D6D6"
         android:rotation="90"

@@ -1,5 +1,5 @@
 package com.example.myapplication
-// фікс обертання екрану, реалізація гуляння між поверхами
+//реалізація гуляння між поверхами
 import android.content.Intent
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var bindingM : ActivityMainBinding
     private var editLauncher : ActivityResultLauncher<Intent>? = null
     private var roomMain = 0
+    private var corp=0
     override fun onCreate(savedInstanceState: Bundle?) {
     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         super.onCreate(savedInstanceState)
@@ -37,13 +38,14 @@ class MainActivity : AppCompatActivity() {
             401, 402, 403, 404 -> {
                 bindingM.imageButton2.setImageResource(R.drawable.corpus1zelen)
                 bindingM.imageButton.setImageResource(R.drawable.corpus_2)
+                corp=1
             }
             -1, -2, -3, -4, -8, 127, 128, 129, 217, 218, 220, 221, 222, 223, 225, 228, 229, 230 -> {
                 bindingM.imageButton.setImageResource(R.drawable.corpuss2zelen)
                 bindingM.imageButton2.setImageResource(R.drawable.corpus_1)
+                corp=2
             }
                 else -> {
-                bindingM.textView.text = ""
                 bindingM.imageButton.setImageResource(R.drawable.corpus_2)
                 bindingM.imageButton2.setImageResource(R.drawable.corpus_1)
             }
@@ -54,17 +56,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun corp1(view : View){
-        val intent = Intent(this, CorpusOne::class.java)
-        intent.putExtra("room", roomMain)
-        startActivity(intent)
-        bindingM.imageButton.setImageResource(R.drawable.corpus_2)
-        bindingM.imageButton2.setImageResource(R.drawable.corpus_1)
+        if(corp==1||corp==0) {
+            val intent = Intent(this, CorpusOne::class.java)
+            intent.putExtra("room", roomMain)
+            startActivity(intent)
+            bindingM.imageButton.setImageResource(R.drawable.corpus_2)
+            bindingM.imageButton2.setImageResource(R.drawable.corpus_1)
+            corp = 0
+        }
+        else Toast.makeText(this, "Ви обрали приміщення в іншому корпусі", Toast.LENGTH_SHORT).show()
     }
     fun corp2(view : View){
-        val intent = Intent(this, CorpusTwo::class.java)
-        intent.putExtra("room", roomMain)
-        startActivity(intent)
-        bindingM.imageButton.setImageResource(R.drawable.corpus_2)
-        bindingM.imageButton2.setImageResource(R.drawable.corpus_1)
+        if(corp==2||corp==0) {
+            val intent = Intent(this, CorpusTwo::class.java)
+            intent.putExtra("room", roomMain)
+            startActivity(intent)
+            bindingM.imageButton.setImageResource(R.drawable.corpus_2)
+            bindingM.imageButton2.setImageResource(R.drawable.corpus_1)
+            corp = 0
+        }
+        else Toast.makeText(this, "Ви обрали приміщення в іншому корпусі", Toast.LENGTH_SHORT).show()
+
     }
 }
