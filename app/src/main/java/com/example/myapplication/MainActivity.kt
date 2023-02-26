@@ -1,7 +1,6 @@
 package com.example.myapplication
 //реалізація гуляння між поверхами
 import android.content.Intent
-import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -35,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 122, 123,
             201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216,
             301, 302, 303, 304, 305, 306, 307, 308, 309, 310,
-            401, 402, 403, 404 -> {
+            401, 402, 403, 404, 666 -> {
                 bindingM.imageButton2.setImageResource(R.drawable.corpus1zelen)
                 bindingM.imageButton.setImageResource(R.drawable.corpus_2)
                 corp=1
@@ -63,6 +62,7 @@ class MainActivity : AppCompatActivity() {
             bindingM.imageButton.setImageResource(R.drawable.corpus_2)
             bindingM.imageButton2.setImageResource(R.drawable.corpus_1)
             corp = 0
+            roomMain = 0
         }
         else Toast.makeText(this, "Ви обрали приміщення в іншому корпусі", Toast.LENGTH_SHORT).show()
     }
@@ -74,6 +74,7 @@ class MainActivity : AppCompatActivity() {
             bindingM.imageButton.setImageResource(R.drawable.corpus_2)
             bindingM.imageButton2.setImageResource(R.drawable.corpus_1)
             corp = 0
+            roomMain = 0
         }
         else Toast.makeText(this, "Ви обрали приміщення в іншому корпусі", Toast.LENGTH_SHORT).show()
 

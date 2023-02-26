@@ -13,7 +13,7 @@ class CorpusTwo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bindingCT = ActivityCorpusTwoBinding.inflate(layoutInflater)
         setContentView(bindingCT.root)
-        room = getIntent().getIntExtra("room", 0)
+        room = intent.getIntExtra("room", 0)
         changeImage(room)
     }
 
@@ -22,7 +22,7 @@ class CorpusTwo : AppCompatActivity() {
         bindingCT.imageView2.setImageResource(R.drawable.corp2_1)
     }
 
-    fun changeImage(room : Int){
+    private fun changeImage(room : Int){
         when(room){
         0->bindingCT.imageView2.setImageResource(R.drawable.corp2_1)
         127->bindingCT.imageView2.setImageResource(R.drawable.c127)

@@ -3,23 +3,20 @@ package com.example.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import com.example.myapplication.databinding.ActivityCorpusOneBinding
-import com.example.myapplication.databinding.ActivityCorpusTwoBinding
 
 class CorpusOne : AppCompatActivity() {
     private lateinit var bindingCO : ActivityCorpusOneBinding
-    var room=0
+    private var room=0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bindingCO = ActivityCorpusOneBinding.inflate(layoutInflater)
         setContentView(bindingCO.root)
-        room = getIntent().getIntExtra("room", 0)
+        room = intent.getIntExtra("room", 0)
         changeImage(room)
     }
 
-    fun changeImage(room : Int){
+    private fun changeImage(room : Int){
         when(room){
             //1-1
         0 -> bindingCO.imageView4.setImageResource(R.drawable.corp1_1)
@@ -58,6 +55,7 @@ class CorpusOne : AppCompatActivity() {
          204-> bindingCO.imageView4.setImageResource(R.drawable.c204)
          205-> bindingCO.imageView4.setImageResource(R.drawable.c205)
          206-> bindingCO.imageView4.setImageResource(R.drawable.c206)
+         666-> bindingCO.imageView4.setImageResource(R.drawable.c206)
          207-> bindingCO.imageView4.setImageResource(R.drawable.c207)
          208-> bindingCO.imageView4.setImageResource(R.drawable.c208)
          209-> bindingCO.imageView4.setImageResource(R.drawable.c209)
