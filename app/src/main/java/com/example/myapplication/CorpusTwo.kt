@@ -9,11 +9,17 @@ import com.example.myapplication.databinding.ActivityCorpusTwoBinding
 class CorpusTwo : AppCompatActivity() {
     private lateinit var bindingCT : ActivityCorpusTwoBinding
     private var room=0
+    private var level=1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bindingCT = ActivityCorpusTwoBinding.inflate(layoutInflater)
         setContentView(bindingCT.root)
         room = intent.getIntExtra("room", 0)
+        if(room==0){        changeLevel()
+        }
+        else{            bindingCT.button4.visibility = View.GONE
+            bindingCT.button5.visibility = View.GONE}
+        changeImage(room)
         changeImage(room)
     }
 
@@ -43,6 +49,32 @@ class CorpusTwo : AppCompatActivity() {
         230->bindingCT.imageView2.setImageResource(R.drawable.c230)
         -1->bindingCT.imageView2.setImageResource(R.drawable.lib)
         -2->bindingCT.imageView2.setImageResource(R.drawable.read)
+        }
+    }
+
+
+    private fun changeLevel(){
+        //while(true)
+        when (level) {
+            1 -> {
+                bindingCT.button4.visibility = View.GONE
+                bindingCT.button5.visibility = View.VISIBLE
+                bindingCT.button5.text = "Поверх 2"
+                bindingCT.button5.setOnClickListener {
+                    bindingCT.imageView2.setImageResource(R.drawable.corp2_2)
+                    level=2
+                    changeLevel()
+                }}
+            2 -> {
+                bindingCT.button4.visibility = View.VISIBLE
+                bindingCT.button5.visibility = View.GONE
+                bindingCT.button4.text = "Поверх 1"
+                bindingCT.button4.setOnClickListener{
+                    bindingCT.imageView2.setImageResource(R.drawable.corp2_1)
+                    level=1
+                    changeLevel()
+                }
+            }
         }
     }
 

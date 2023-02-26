@@ -1,5 +1,5 @@
 package com.example.myapplication
-//реалізація гуляння між поверхами
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

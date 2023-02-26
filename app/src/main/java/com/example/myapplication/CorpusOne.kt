@@ -8,11 +8,19 @@ import com.example.myapplication.databinding.ActivityCorpusOneBinding
 class CorpusOne : AppCompatActivity() {
     private lateinit var bindingCO : ActivityCorpusOneBinding
     private var room=0
+    private var level=1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bindingCO = ActivityCorpusOneBinding.inflate(layoutInflater)
         setContentView(bindingCO.root)
         room = intent.getIntExtra("room", 0)
+        bindingCO.button4.visibility = View.GONE
+        bindingCO.button5.visibility = View.GONE
+        bindingCO.imageView4.setImageResource(R.drawable.corp1_1)
+        if(room==0){        changeLevel()
+        }
+        else{            bindingCO.button4.visibility = View.GONE
+            bindingCO.button5.visibility = View.GONE}
         changeImage(room)
     }
 
@@ -88,7 +96,63 @@ class CorpusOne : AppCompatActivity() {
 
     fun onClick(view: View){
         finish()
-        bindingCO.imageView4.setImageResource(R.drawable.corp1_1)
     }
 
+
+    private fun changeLevel(){
+        //while(true)
+        when (level) {
+            1 -> {
+                bindingCO.button4.visibility = View.GONE
+                bindingCO.button5.visibility = View.VISIBLE
+                bindingCO.button5.text = "Поверх 2"
+                bindingCO.button5.setOnClickListener {
+                    bindingCO.imageView4.setImageResource(R.drawable.corp1_2)
+                    level=2
+                    changeLevel()
+                }}
+            2 -> {
+                bindingCO.button4.visibility = View.VISIBLE
+                bindingCO.button5.visibility = View.VISIBLE
+                bindingCO.button4.text = "Поверх 1"
+                bindingCO.button5.text = "Поверх 3"
+                bindingCO.button5.setOnClickListener {
+                    bindingCO.imageView4.setImageResource(R.drawable.corp1_3)
+                    level=3
+                    changeLevel()
+                }
+                bindingCO.button4.setOnClickListener{
+                    bindingCO.imageView4.setImageResource(R.drawable.corp1_1)
+                    level=1
+                    changeLevel()
+                }
+            }
+            3 -> {
+                bindingCO.button4.visibility = View.VISIBLE
+                bindingCO.button5.visibility = View.VISIBLE
+                bindingCO.button4.text = "Поверх 2"
+                bindingCO.button5.text = "Поверх 4"
+                bindingCO.button5.setOnClickListener{
+                    bindingCO.imageView4.setImageResource(R.drawable.corp1_4)
+                    level=4
+                    changeLevel()
+                }
+                bindingCO.button4.setOnClickListener{
+                    bindingCO.imageView4.setImageResource(R.drawable.corp1_2)
+                    level=2
+                    changeLevel()
+                }
+            }
+            4 -> {
+                bindingCO.button4.visibility = View.VISIBLE
+                bindingCO.button5.visibility = View.GONE
+                bindingCO.button4.text = "Поверх 2"
+                bindingCO.button4.setOnClickListener{
+                    bindingCO.imageView4.setImageResource(R.drawable.corp1_3)
+                    level=3
+                    changeLevel()
+                }
+            }
+        }
+    }
 }
