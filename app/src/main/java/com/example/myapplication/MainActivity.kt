@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
                 roomMain = it.data!!.getIntExtra("room", 0)
                 changeCorp(roomMain)
             }
+            else if(it.resultCode== RESULT_CANCELED) bindingM.buttonDB.visibility = View.VISIBLE
         }
     }
 
@@ -52,6 +53,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun search(view : View) {
         editLauncher?.launch(Intent(this@MainActivity, SearchActivity::class.java))
+        bindingM.buttonDB.visibility = View.GONE
     }
 
     fun corp1(view : View){
@@ -63,6 +65,7 @@ class MainActivity : AppCompatActivity() {
             bindingM.imageButton2.setImageResource(R.drawable.corpus_1)
             corp = 0
             roomMain = 0
+            bindingM.buttonDB.visibility = View.VISIBLE
         }
         else Toast.makeText(this, "Ви обрали приміщення в іншому корпусі", Toast.LENGTH_SHORT).show()
     }
@@ -75,8 +78,15 @@ class MainActivity : AppCompatActivity() {
             bindingM.imageButton2.setImageResource(R.drawable.corpus_1)
             corp = 0
             roomMain = 0
+            bindingM.buttonDB.visibility = View.VISIBLE
         }
         else Toast.makeText(this, "Ви обрали приміщення в іншому корпусі", Toast.LENGTH_SHORT).show()
 
+    }
+
+
+    fun db(view : View){
+            val intent = Intent(this, DB::class.java)
+            startActivity(intent)
     }
 }

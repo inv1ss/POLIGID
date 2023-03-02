@@ -27,4 +27,7 @@
     <string name="todo2">todo</string>
     <string name="main">Меню</string>
     <string name="level">Поверх</string>
+    <string name="initials">Ініціали викладача</string>
+    <string name="surname">Введіть прізвище</string>
+    <string name="searchdb">Пошук</string>
 </resources>

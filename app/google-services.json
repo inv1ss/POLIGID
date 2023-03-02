@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "420253034150",
+    "firebase_url": "https://poligid-ebeaf-default-rtdb.firebaseio.com",
+    "project_id": "poligid-ebeaf",
+    "storage_bucket": "poligid-ebeaf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420253034150:android:cfaef20d01cb4b70247667",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420253034150-m0r4uft07koplk4fci1fdio0jpkrfb96.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6UWbZwtjXV1w8tAQ7kq4bFgnYfyCC148"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420253034150-m0r4uft07koplk4fci1fdio0jpkrfb96.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
