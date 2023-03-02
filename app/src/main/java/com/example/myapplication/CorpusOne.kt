@@ -63,7 +63,7 @@ class CorpusOne : AppCompatActivity() {
          204-> bindingCO.imageView4.setImageResource(R.drawable.c204)
          205-> bindingCO.imageView4.setImageResource(R.drawable.c205)
          206-> bindingCO.imageView4.setImageResource(R.drawable.c206)
-         666-> bindingCO.imageView4.setImageResource(R.drawable.c206)
+         666-> bindingCO.imageView4.setImageResource(R.drawable.c666)
          207-> bindingCO.imageView4.setImageResource(R.drawable.c207)
          208-> bindingCO.imageView4.setImageResource(R.drawable.c208)
          209-> bindingCO.imageView4.setImageResource(R.drawable.c209)
