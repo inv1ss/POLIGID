@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.KeyEvent
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.core.widget.doAfterTextChanged
 import com.example.myapplication.databinding.ActivityDbBinding
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.ktx.firestore
@@ -39,6 +40,11 @@ class DB : AppCompatActivity() {
             } else {
 
                 false
+            }
+        }
+        bindingDB.editTextTextPersonName.doAfterTextChanged {
+            if (bindingDB.editTextTextPersonName.text.toString() != "") {
+                find()
             }
         }
     }

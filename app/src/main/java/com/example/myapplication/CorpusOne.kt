@@ -146,7 +146,7 @@ class CorpusOne : AppCompatActivity() {
             4 -> {
                 bindingCO.button4.visibility = View.VISIBLE
                 bindingCO.button5.visibility = View.GONE
-                bindingCO.button4.text = "Поверх 2"
+                bindingCO.button4.text = "Поверх 3"
                 bindingCO.button4.setOnClickListener{
                     bindingCO.imageView4.setImageResource(R.drawable.corp1_3)
                     level=3
