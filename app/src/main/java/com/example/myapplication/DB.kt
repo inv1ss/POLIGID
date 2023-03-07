@@ -18,16 +18,12 @@ class DB : AppCompatActivity() {
     private lateinit var bindingDB: ActivityDbBinding
     private var mDB = Firebase.firestore
     private var dbref=mDB.collection("USER")
-
     private var txt= ArrayList<String>()
-
-    //    var USER_KEY="USER"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bindingDB = ActivityDbBinding.inflate(layoutInflater)
         setContentView(bindingDB.root)
         getData()
-
         bindingDB.editTextTextPersonName.setOnKeyListener { _, i, keyEvent ->
             if (i == KeyEvent.KEYCODE_ENTER && keyEvent.action == KeyEvent.ACTION_UP) {
                 if (bindingDB.editTextTextPersonName.text.toString() != "") {
@@ -63,21 +59,12 @@ class DB : AppCompatActivity() {
                         val patronymic = documentSnapshot.getString("patronymic").toString()
                         val i= "$surname $name $patronymic"
                         txt.add(i)
+                    find()
                     }
-          //      bindingDB.textView.text=txt[0].name
             }
             .addOnFailureListener {
                 Log.w("TAG", "Error getting documents: ")
             }
-    }
-
-    fun onCl(view: View){
-        if (bindingDB.editTextTextPersonName.text.toString() != "") {
-            find()
-        } else {
-            Toast.makeText(this, "Введіть прізвище викладача", Toast.LENGTH_SHORT).show()
-        }
-        find()
     }
 
     private fun find(){
